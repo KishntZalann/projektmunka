@@ -105,9 +105,12 @@ while running:
         monster_y += dy/dist * 0.01
 
     if dist < 0.5:
-        print("ELKAPOTT 😱")
+        print("Vége")
         running = False
 
+    if keys[pygame.K_q]:
+        running = False
+        
     cast_rays()
 
     pygame.display.flip()
